@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Config {
+  id          String      @id @default(uuid())
+  name        String   
+  standard    Int
+  password    String
+  activo      Boolean
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@map("configs")
+}
+
+model Count {
+  id          String      @id @default(uuid())
+  countGreen  Int
+  countWhite  Int
+  countRed    Int
+  countGale1  Int
+  countGale2  Int
+  createdAt   String
+  updatedAt   DateTime    @updatedAt
+
+  @@map("counts")
+}
