@@ -24,7 +24,7 @@ Esse bot tem como objetivo enviar mensagem em grupo/canal no telegram, indicando
  
   Caminho:
   ```
-  ./helpers/botMetrics/MetricDouble.ts
+  ./src/helpers/botMetrics/MetricDouble.ts
   ```
 
 
@@ -103,6 +103,14 @@ Para esse projeto é necessário ter um banco de dados, optei por usar o [MySql]
    ```
 3. Executar em produção
    ```
+   npm run build
+   ```
+   ou
+   ```
+   yarn build
+   ```
+   Depois esse comando
+   ```
    npm run start
    ```
    ou
@@ -140,7 +148,7 @@ _Para que o BOT venha enviar mensagem no telegram, você precisa enviar uma requ
 
    Programe seu padrão neste arquivo
    ```
-   ./helpers/botMetrics/MetricDouble.ts
+   ./src/helpers/botMetrics/MetricDouble.ts
    ```
 2. _Você precisa **COLETAR** a última cor que saiu na [Blaze][blaze]_
 
