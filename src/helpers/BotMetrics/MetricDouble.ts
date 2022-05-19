@@ -39,9 +39,11 @@ class MetricDouble {
 
     async verifySequenceFour({ colorName, number, standard }: ISequenceFour) {
         //insira seu padrão aqui
-        console.log("Precisa fazer seu padrão!")
+        const message = `Você precisa fazer o seu padrão!`
+        this.bot.sendMessage({ message })
+        console.log({ message })
 
-        return { message: "Precisa fazer seu padrão!" }
+        return { message }
     }
 }
 

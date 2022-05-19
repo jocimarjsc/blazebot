@@ -27,7 +27,7 @@ class Bot {
     bots: Telegraf
 
     constructor() {
-        this.start = "Bot On! 🟢"
+        this.start = "🤖 Bot On! 🟢"
         this.bots = new Telegraf(process.env.TOKEN_TELEGRAM)
     }
 
