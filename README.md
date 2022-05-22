@@ -127,7 +127,7 @@ Para esse projeto é necessário ter um banco de dados, optei por usar o [MySql]
 <p align="right"><a href="#top">top</a></p>
 
 ## 📛 Rotas
-_Para que o BOT venha enviar mensagem no telegram, você precisa enviar uma requeste para a "Rota" abaixo._
+_Para que o BOT venha enviar mensagem no telegram, você precisa enviar uma request para a "Rota" abaixo._
 
 * Recebe a última cor que saiu na [Blaze][blaze], tipo: "POST".
   
