@@ -34,6 +34,7 @@ class Bot {
     public async inital() {
 
         try {
+            console.log(this.start)
             this.bots.launch();
 
             process.once("SIGINT", () => this.bots.stop("SIGINT"));

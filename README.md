@@ -86,7 +86,7 @@ Para esse projeto é necessário ter um banco de dados, optei por usar o [MySql]
 1. Deve-se executar
 
    ```
-   npm run prisma migrate dev --name add_tables
+   npx prisma migrate dev --name add_tables
    ```
    ou
    ```
@@ -141,6 +141,11 @@ _Para que o BOT venha enviar mensagem no telegram, você precisa enviar uma requ
       "number": "4"
     }
    ~~~
+* Se no console aparecer:
+   ```
+   ⚙️ Precisa configurar seu bot!
+   ```
+   _Abra c onversa do seu Bot no telegram use o comando `/start` e sigua os passos para cadastrar seu bot._
 
 ## ⚠️ Observações
 
