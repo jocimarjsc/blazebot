@@ -119,7 +119,7 @@ Para esse projeto é necessário ter um banco de dados, optei por usar o [MySql]
    ```
 
    __Se tudo ocorreu bem, deve ver no console as seguintes messagens:__
-   ```javascript
+   ```
    🤖 Bot On! 🟢
    ✅ Server is running!
    ```
@@ -145,7 +145,7 @@ _Para que o BOT venha enviar mensagem no telegram, você precisa enviar uma requ
    ```
    ⚙️ Precisa configurar seu bot!
    ```
-   _Abra c onversa do seu Bot no telegram use o comando `/start` e sigua os passos para cadastrar seu bot._
+   _Abra a conversa do seu Bot no telegram use o comando `/start` e sigua os passos para cadastrar seu bot._
 
 ## ⚠️ Observações
 
