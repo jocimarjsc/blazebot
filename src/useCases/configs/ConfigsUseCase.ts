@@ -28,6 +28,14 @@ class ConfigsUseCase {
         return configs
     }
 
+    async findByName(name: string) {
+        const config = await client.config.findFirst({
+            where: { name }
+        })
+
+        return config
+    }
+
     async update({ standard, activo, id }: IConfigsRequest) {
         const configs = await client.config.update({
             where: { id },

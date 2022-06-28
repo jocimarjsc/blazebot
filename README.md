@@ -20,13 +20,13 @@ A [Blaze][blaze] apostas é um cassino online que recentemente se tornou popular
 Esse bot tem como objetivo enviar mensagem em grupo/canal no telegram, indicando uma possível cor para apostar.
 
 * __O bot não faz a coleta da útima cor que saiu na blaze, isso você vai ter que fazer.__
-* __Não existe um padrão programado, você tem que programar ele neste arquivo `MetricDouble.ts`.__
+* __Para fazer alguma alteração no padrão desse Bot, acesse esse arquivo `MetricDouble.ts`.__
  
   Caminho:
   ```
   ./src/helpers/botMetrics/MetricDouble.ts
   ```
-
+* __Esse bot foi desenvolvido com o padrão de cores 🔴🔴🔴⚫, ao cadastrar seu bot , precisa informar o padrão, ou seja, a quantidade de vezes que precisa repetir uma cor para poder enviar o sinal no canal.__
 
 
 <p align="right"><a href="#top">top</a></p>
@@ -37,6 +37,7 @@ Esse bot tem como objetivo enviar mensagem em grupo/canal no telegram, indicando
 ## ✨ Instalação
 
 _Para executar o bot, precisa seguir os passos a seguir._
+* __Presumo que já tenha [NodeJs][nodejs] instalado.__
 
 1. Clone o repositório
    ```sh
@@ -54,11 +55,13 @@ _Para executar o bot, precisa seguir os passos a seguir._
 
 4. Coloque os valores das variavés de ambiente no arquivo `.env`
    ```js
-   PORT = 3000
+   PORT = 3000 //não alterar essa porta
    
    TOKEN_TELEGRAM = your bot token
    
    CHANNEL_NAME = your ID channel
+
+   BOT_NAME = bot name
 
    DATABASE_URL="mysql://userDatabase:password@localhost:port/nameDatabase"
    ```
@@ -129,7 +132,7 @@ Para esse projeto é necessário ter um banco de dados, optei por usar o [MySql]
 ## 📛 Rotas
 _Para que o BOT venha enviar mensagem no telegram, você precisa enviar uma request para a "Rota" abaixo._
 
-* Recebe a última cor que saiu na [Blaze][blaze], tipo: "POST".
+* Recebe a última cor que saiu na [Blaze][blaze], Método: "POST".
   
   ```
     https://localhost:3000/colors
@@ -145,17 +148,11 @@ _Para que o BOT venha enviar mensagem no telegram, você precisa enviar uma requ
    ```
    ⚙️ Precisa configurar seu bot!
    ```
-   _Abra a conversa do seu Bot no telegram use o comando `/start` e sigua os passos para cadastrar seu bot._
+   _Abra a conversa do seu Bot no telegram use o comando `/start` e siga os passos para cadastrar seu bot._
 
 ## ⚠️ Observações
 
-1. _Você precisa **PROGRAMAR** o padrão que pretende utilizar_
-
-   Programe seu padrão neste arquivo
-   ```
-   ./src/helpers/botMetrics/MetricDouble.ts
-   ```
-2. _Você precisa **COLETAR** a última cor que saiu na [Blaze][blaze]_
+1. _Você precisa **COLETAR** a última cor que saiu na [Blaze][blaze]._
 
 <p align="right"><a href="#top">top</a></p>
 
@@ -170,4 +167,5 @@ Telegram: __@jocimarjsc__
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [GitHub]: https://github.com/jocimarjsc
 [blaze]: https://blaze.com/r/KOGDR9
-[mysql]: https://www.mysql.com/downloads/
+[mysql]: https://dev.mysql.com/downloads/installer/
+[nodejs]: https://nodejs.org/en/

@@ -7,7 +7,9 @@ interface IMessage {
     countGreen?: number
     countRed?: number
     color?: string
+    channel?: string
     message: string
+    messageID?: number
 }
 
 interface IDataCount {
@@ -60,6 +62,16 @@ class Bot {
             await this.bots.telegram.deleteMessage(process.env.CHANNEL_NAME, messageID)
         } catch (error) {
             console.log("Error in delete message!")
+        }
+    }
+
+    async replyMessage({ message, messageID }: IMessage) {
+        try {
+            const messageId = await this.bots.telegram.sendMessage(process.env.CHANNEL_NAME, message, { reply_to_message_id: messageID, parse_mode: "HTML" })
+            return messageId.message_id
+        } catch (error) {
+            console.log("Error reply message!")
+            console.log(error.message)
         }
     }
 
